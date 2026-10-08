@@ -23,9 +23,12 @@ EXCLUDES=()
 while IFS= read -r line; do
   line="${line%%#*}"; line="$(echo "$line" | tr -d '[:space:]')"
   [ -z "$line" ] && continue
-  EXCLUDES+=("--exclude=.${line}")
+  case "$line" in
+    /*) EXCLUDES+=("--exclude=.${line}") ;;   # /pfad -> nur im Hauptordner
+    *)  EXCLUDES+=("--exclude=${line}") ;;    # name  -> ueberall (z. B. .DS_Store)
+  esac
 done < "$ROOT/.distignore"
-( cd "$ROOT" && tar "${EXCLUDES[@]}" --exclude='./Build' --exclude='._*' -cf - . ) | tar -C "$TMP/n9c-monitor" -xf -
+( cd "$ROOT" && tar "${EXCLUDES[@]}" --exclude='./Build' --exclude='.DS_Store' --exclude='._*' -cf - . ) | tar -C "$TMP/n9c-monitor" -xf -
 rm -f "$ZIP"
 ( cd "$TMP" && zip -r -X -q "$ZIP" n9c-monitor )
 echo "Erstellt: $ZIP ($(unzip -l "$ZIP" | tail -1 | awk '{print $2}') Dateien)"

@@ -1,0 +1,48 @@
+name: Release
+
+# Ein Tag v<version> (z. B. v0.1.0) erzeugt ein GitHub-Release mit der ZIP und
+# veroeffentlicht im Plugin-Verzeichnis von wordpress.org, sobald die Secrets
+# SVN_USERNAME und SVN_PASSWORD gesetzt sind (wordpress.org-Benutzername und
+# SVN-Passwort aus dem Profil -> Account & Security).
+on:
+  push:
+    tags: ['v*']
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+      SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tag passt zu Plugin-Version, readme.txt und CHANGELOG
+        run: |
+          V="${GITHUB_REF_NAME#v}"
+          echo "VERSION=$V" >> "$GITHUB_ENV"
+          grep -q "^ \* Version: *$V$" n9c-monitor.php || { echo "::error::n9c-monitor.php hat nicht Version $V"; exit 1; }
+          grep -q "^Stable tag: $V$" readme.txt || { echo "::error::readme.txt hat nicht Stable tag $V"; exit 1; }
+          grep -q "^## $V" CHANGELOG.md || { echo "::error::CHANGELOG.md hat keinen Abschnitt ## $V"; exit 1; }
+
+      - name: ZIP bauen
+        run: Build/build-zip.sh
+
+      - name: Release-Text aus dem CHANGELOG
+        run: awk -v v="## $VERSION" 'index($0, v)==1 {f=1; next} /^## / {f=0} f' CHANGELOG.md > release-notes.md
+
+      - name: GitHub-Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: Build/dist/n9c-monitor-${{ env.VERSION }}.zip
+          body_path: release-notes.md
+
+      - name: Auf wordpress.org veroeffentlichen (SVN)
+        if: env.SVN_USERNAME != ''
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        env:
+          SLUG: n9c-monitor
+          VERSION: ${{ env.VERSION }}
+          ASSETS_DIR: .wordpress-org

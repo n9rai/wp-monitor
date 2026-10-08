@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    name: PHP ${{ matrix.php }} Syntax
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['7.4', '8.0', '8.1', '8.2', '8.3', '8.4']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+          tools: none
+      - name: Syntax aller PHP-Dateien
+        run: find . -path ./.git -prune -o -name '*.php' -print0 | xargs -0 -n1 php -l
+      - name: ZIP bauen (prueft auch, dass Header, Konstante und Stable tag dieselbe Version haben)
+        if: matrix.php == '8.3'
+        run: Build/build-zip.sh
+
+  plugin-check:
+    name: Plugin Check (wordpress.org)
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Plugin-Ordner wie in der ZIP
+        run: |
+          mkdir -p /tmp/build && Build/build-zip.sh && unzip -q Build/dist/*.zip -d /tmp/build
+      - uses: wordpress/plugin-check-action@v1
+        with:
+          build-dir: /tmp/build/n9c-monitor

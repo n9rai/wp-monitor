@@ -1,0 +1,25 @@
+/* N9C Inside Monitor – admin page */
+.n9c-monitor .n9c-monitor-actions span { margin-left: 8px; }
+.n9c-monitor .n9c-monitor-tiles { display: flex; flex-wrap: wrap; gap: 12px; margin: 12px 0; }
+.n9c-monitor .n9c-monitor-tile { flex: 1 1 140px; max-width: 220px; background: #fff; border: 1px solid #c3c4c7; border-radius: 4px; padding: 12px; text-align: center; }
+.n9c-monitor .n9c-monitor-value { font-size: 32px; font-weight: 600; line-height: 1.2; }
+.n9c-monitor .n9c-monitor-tile.critical .n9c-monitor-value { color: #d63638; }
+.n9c-monitor .n9c-monitor-tile.medium .n9c-monitor-value { color: #996800; }
+.n9c-monitor .n9c-monitor-tile.ok .n9c-monitor-value { color: #008a20; }
+.n9c-monitor .n9c-monitor-badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.n9c-monitor .n9c-monitor-badge.critical { background: #d63638; color: #fff; }
+.n9c-monitor .n9c-monitor-badge.medium { background: #f0c33c; color: #1d2327; }
+.n9c-monitor .n9c-monitor-badge.ok { background: #00a32a; color: #fff; }
+.n9c-monitor .n9c-monitor-findings td:first-child { width: 90px; }
+.n9c-monitor .n9c-monitor-findings td:last-child { width: 40%; }
+.n9c-monitor .n9c-monitor-connection th { width: 220px; }
+.n9c-monitor .n9c-monitor-send { margin: 16px 0 24px; }
+.n9c-monitor .n9c-monitor-details { margin: 16px 0; }
+.n9c-monitor .n9c-monitor-details summary { cursor: pointer; font-weight: 600; }
+.n9c-monitor .n9c-monitor-card { max-width: 760px; }
+.n9c-monitor .n9c-monitor-moved-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.n9c-monitor .n9c-monitor-json { background: #fff; border: 1px solid #c3c4c7; padding: 12px; max-height: 70vh; overflow: auto; font-size: 12px; white-space: pre-wrap; word-break: break-word; }
+@media (max-width: 782px) {
+	.n9c-monitor .n9c-monitor-findings td:last-child { width: auto; }
+	.n9c-monitor .n9c-monitor-connection th { width: auto; }
+}

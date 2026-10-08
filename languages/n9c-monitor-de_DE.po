@@ -1,0 +1,464 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: N9C Inside Monitor 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/n9pot\n"
+"POT-Creation-Date: 2026-10-08T07:05:48+00:00\n"
+"PO-Revision-Date: 2026-10-08 09:00+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: N9C\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: n9c-monitor\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#: n9c-monitor.php includes/class-n9c-monitor-admin.php:73
+#: includes/class-n9c-monitor-admin.php:213
+msgid "N9C Inside Monitor"
+msgstr "N9C Inside Monitor"
+
+#. Plugin URI of the plugin
+#: n9c-monitor.php
+msgid "https://n9c.io/monitoring"
+msgstr "https://n9c.io/monitoring"
+
+#. Description of the plugin
+#: n9c-monitor.php
+msgid ""
+"Security monitoring from the inside: reports versions, plugins, "
+"configuration and admin accounts without two-factor login to the N9C Inside "
+"Monitor. Numbers and flags only – no user names, e-mail addresses or "
+"content."
+msgstr ""
+"Sicherheits-Monitoring von innen: meldet Versionen, Plugins, Konfiguration "
+"und Administrator-Konten ohne Zwei-Faktor-Anmeldung an den N9C Inside "
+"Monitor. Nur Zahlen und Flags – keine Benutzernamen, E-Mail-Adressen oder "
+"Inhalte."
+
+#. Author of the plugin
+#: n9c-monitor.php
+msgid "N9C"
+msgstr "N9C"
+
+#. Author URI of the plugin
+#: n9c-monitor.php
+msgid "https://n9c.io"
+msgstr "https://n9c.io"
+
+#: includes/class-n9c-monitor-admin.php:101
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: includes/class-n9c-monitor-admin.php:112
+msgid "You are not allowed to do this."
+msgstr "Dazu fehlt Ihnen die Berechtigung."
+
+#: includes/class-n9c-monitor-admin.php:127
+msgid "Please resolve the address change first (see below)."
+msgstr "Bitte zuerst die Adressänderung klären (siehe unten)."
+
+#: includes/class-n9c-monitor-admin.php:134
+msgid "Report sent and evaluated."
+msgstr "Report gesendet und ausgewertet."
+
+#: includes/class-n9c-monitor-admin.php:136
+msgid "A report was sent less than a minute ago. Please try again shortly."
+msgstr ""
+"Vor weniger als einer Minute wurde bereits ein Report gesendet. Bitte gleich"
+" noch einmal versuchen."
+
+#. translators: %d: HTTP status code
+#: includes/class-n9c-monitor-admin.php:139
+#, php-format
+msgid "The report was not accepted (HTTP %d)."
+msgstr "Der Report wurde nicht angenommen (HTTP %d)."
+
+#: includes/class-n9c-monitor-admin.php:146
+msgid ""
+"Move confirmed. This installation keeps reporting as the same instance."
+msgstr ""
+"Umzug bestätigt. Diese Installation meldet weiter als dieselbe Instanz."
+
+#: includes/class-n9c-monitor-admin.php:151
+msgid ""
+"Disconnected. The local credentials have been removed; the instance remains "
+"in your N9C dashboard."
+msgstr ""
+"Getrennt. Die Zugangsdaten wurden hier entfernt; die Instanz bleibt in Ihrem"
+" N9C-Dashboard erhalten."
+
+#: includes/class-n9c-monitor-admin.php:241
+msgid "Back"
+msgstr "Zurück"
+
+#: includes/class-n9c-monitor-admin.php:242
+#: includes/class-n9c-monitor-admin.php:502
+msgid "Data preview"
+msgstr "Datenvorschau"
+
+#: includes/class-n9c-monitor-admin.php:243
+msgid ""
+"This is exactly what is sent to the N9C Inside Monitor with every report. "
+"Nothing has been sent by opening this page."
+msgstr ""
+"Genau das wird bei jedem Report an den N9C Inside Monitor gesendet. Durch "
+"das Öffnen dieser Seite wurde nichts gesendet."
+
+#: includes/class-n9c-monitor-admin.php:259
+msgid ""
+"Reports security-relevant metrics of this installation to the N9C monitoring"
+" service – numbers and flags only, no names, e-mail addresses or content."
+msgstr ""
+"Meldet sicherheitsrelevante Kennzahlen dieser Installation an den N9C "
+"Monitoring-Dienst – nur Zahlen und Flags, keine Namen, E-Mail-Adressen oder "
+"Inhalte."
+
+#: includes/class-n9c-monitor-admin.php:260
+msgid "See exactly what is sent →"
+msgstr "Genau ansehen, was gesendet wird →"
+
+#: includes/class-n9c-monitor-admin.php:274
+msgid "Open in the N9C dashboard"
+msgstr "Im N9C-Dashboard öffnen"
+
+#: includes/class-n9c-monitor-admin.php:277
+msgid "Plan:"
+msgstr "Tarif:"
+
+#. translators: %s: date
+#: includes/class-n9c-monitor-admin.php:282
+#, php-format
+msgid "until %s"
+msgstr "bis %s"
+
+#: includes/class-n9c-monitor-admin.php:287
+msgid "History, e-mail alerts and outside scans with the subscription"
+msgstr "Verlauf, E-Mail-Alerts und Außenscans mit dem Abo"
+
+#: includes/class-n9c-monitor-admin.php:294
+msgid ""
+"This installation is paused because the quota of your N9C account is used "
+"up."
+msgstr ""
+"Diese Installation ruht, weil das Kontingent Ihres N9C-Kontos ausgeschöpft "
+"ist."
+
+#: includes/class-n9c-monitor-admin.php:295
+msgid "Add installations in the dashboard →"
+msgstr "Weitere Installationen im Dashboard buchen →"
+
+#: includes/class-n9c-monitor-admin.php:302
+msgid "Send report now"
+msgstr "Jetzt Report senden"
+
+#: includes/class-n9c-monitor-admin.php:315
+msgid "Latest evaluation"
+msgstr "Letzte Auswertung"
+
+#: includes/class-n9c-monitor-admin.php:317
+msgid "No report sent yet."
+msgstr "Noch kein Report gesendet."
+
+#: includes/class-n9c-monitor-admin.php:324
+msgid "Score"
+msgstr "Score"
+
+#: includes/class-n9c-monitor-admin.php:325
+#: includes/class-n9c-monitor-admin.php:387
+msgid "critical"
+msgstr "kritisch"
+
+#: includes/class-n9c-monitor-admin.php:326
+#: includes/class-n9c-monitor-admin.php:387
+msgid "medium"
+msgstr "mittel"
+
+#: includes/class-n9c-monitor-admin.php:327
+msgid "passed"
+msgstr "bestanden"
+
+#: includes/class-n9c-monitor-admin.php:342
+msgid "The N9C service could not be reached:"
+msgstr "Der N9C-Dienst war nicht erreichbar:"
+
+#. translators: %d: HTTP status code
+#: includes/class-n9c-monitor-admin.php:345
+#, php-format
+msgid "The last report was not accepted (HTTP %d):"
+msgstr "Der letzte Report wurde nicht angenommen (HTTP %d):"
+
+#: includes/class-n9c-monitor-admin.php:349
+msgid "Please check the connection and the server time (NTP)."
+msgstr "Bitte Verbindung und Serverzeit (NTP) prüfen."
+
+#: includes/class-n9c-monitor-admin.php:355
+msgid "automatic"
+msgstr "automatisch"
+
+#: includes/class-n9c-monitor-admin.php:356
+msgid "manual"
+msgstr "manuell"
+
+#: includes/class-n9c-monitor-admin.php:357
+msgid "WP-CLI"
+msgstr "WP-CLI"
+
+#: includes/class-n9c-monitor-admin.php:358
+msgid "on connecting"
+msgstr "beim Verbinden"
+
+#. translators: 1: date and time, 2: trigger
+#: includes/class-n9c-monitor-admin.php:363
+#, php-format
+msgid "As of %1$s (%2$s)"
+msgstr "Stand: %1$s (%2$s)"
+
+#. translators: 1: number of new findings, 2: number of resolved findings
+#: includes/class-n9c-monitor-admin.php:366
+#, php-format
+msgid "since the previous report: %1$d new, %2$d resolved"
+msgstr "seit dem vorherigen Report: %1$d neu, %2$d behoben"
+
+#: includes/class-n9c-monitor-admin.php:374
+msgid "No open findings."
+msgstr "Keine offenen Befunde."
+
+#: includes/class-n9c-monitor-admin.php:377
+msgid "Open findings"
+msgstr "Offene Befunde"
+
+#: includes/class-n9c-monitor-admin.php:379
+msgid "Severity"
+msgstr "Schwere"
+
+#: includes/class-n9c-monitor-admin.php:379
+msgid "Finding"
+msgstr "Befund"
+
+#: includes/class-n9c-monitor-admin.php:379
+msgid "Recommendation"
+msgstr "Empfehlung"
+
+#: includes/class-n9c-monitor-admin.php:406
+msgid "constants in wp-config.php"
+msgstr "Konstanten in der wp-config.php"
+
+#: includes/class-n9c-monitor-admin.php:407
+msgid "environment variables"
+msgstr "Umgebungsvariablen"
+
+#: includes/class-n9c-monitor-admin.php:408
+msgid "database (wp_options)"
+msgstr "Datenbank (wp_options)"
+
+#: includes/class-n9c-monitor-admin.php:411
+msgid "Status"
+msgstr "Status"
+
+#: includes/class-n9c-monitor-admin.php:411
+msgid "connected"
+msgstr "verbunden"
+
+#: includes/class-n9c-monitor-admin.php:412
+msgid "Instance ID"
+msgstr "Instanz-ID"
+
+#: includes/class-n9c-monitor-admin.php:413
+msgid "Service"
+msgstr "Dienst"
+
+#: includes/class-n9c-monitor-admin.php:414
+msgid "Credentials from"
+msgstr "Zugangsdaten aus"
+
+#: includes/class-n9c-monitor-admin.php:415
+msgid "Automatic report"
+msgstr "Automatischer Report"
+
+#. translators: %d: number of hours
+#: includes/class-n9c-monitor-admin.php:418
+#, php-format
+msgid "on, every %d hours via WP-Cron"
+msgstr "an, alle %d Stunden per WP-Cron"
+
+#: includes/class-n9c-monitor-admin.php:419
+msgid "off (N9C_MONITOR_AUTO_REPORT), WP-CLI only"
+msgstr "aus (N9C_MONITOR_AUTO_REPORT), nur per WP-CLI"
+
+#: includes/class-n9c-monitor-admin.php:421
+msgid "Next report"
+msgstr "Nächster Report"
+
+#: includes/class-n9c-monitor-admin.php:422
+msgid "Plugin"
+msgstr "Plugin"
+
+#: includes/class-n9c-monitor-admin.php:424
+msgid "Connection"
+msgstr "Verbindung"
+
+#: includes/class-n9c-monitor-admin.php:434
+#: includes/class-n9c-monitor-admin.php:440
+msgid "Reconnect"
+msgstr "Neu verbinden"
+
+#: includes/class-n9c-monitor-admin.php:435
+msgid "Only needed if N9C asks you to. The instance and its history are kept."
+msgstr ""
+"Nur nötig, wenn N9C Sie darum bittet. Instanz und Verlauf bleiben erhalten."
+
+#: includes/class-n9c-monitor-admin.php:443
+#: includes/class-n9c-monitor-admin.php:447
+msgid "Disconnect"
+msgstr "Trennen"
+
+#: includes/class-n9c-monitor-admin.php:444
+msgid ""
+"Removes the credentials from this installation. No more reports are sent. "
+"The instance and its history remain in your N9C dashboard, where you can "
+"delete it."
+msgstr ""
+"Entfernt die Zugangsdaten aus dieser Installation. Es werden keine Reports "
+"mehr gesendet. Instanz und Verlauf bleiben im N9C-Dashboard, dort können Sie"
+" die Instanz löschen."
+
+#: includes/class-n9c-monitor-admin.php:458
+msgid "The address of this installation has changed."
+msgstr "Die Adresse dieser Installation hat sich geändert."
+
+#. translators: 1: previous address, 2: current address
+#: includes/class-n9c-monitor-admin.php:462
+#, php-format
+msgid ""
+"It was connected as %1$s and now runs as %2$s. Automatic reports are paused "
+"so that a copy (e.g. staging) does not report as the live site."
+msgstr ""
+"Verbunden wurde sie als %1$s, jetzt läuft sie unter %2$s. Automatische "
+"Reports sind pausiert, damit eine Kopie (z. B. Staging) nicht als Live-"
+"Website meldet."
+
+#: includes/class-n9c-monitor-admin.php:470
+msgid "The site has moved – keep reporting"
+msgstr "Die Website ist umgezogen – weiter melden"
+
+#: includes/class-n9c-monitor-admin.php:474
+msgid "This is a copy – disconnect"
+msgstr "Das ist eine Kopie – trennen"
+
+#: includes/class-n9c-monitor-admin.php:485
+msgid "Not connected yet"
+msgstr "Noch nicht verbunden"
+
+#: includes/class-n9c-monitor-admin.php:486
+msgid "Three steps to your first evaluation:"
+msgstr "In drei Schritten zur Auswertung:"
+
+#: includes/class-n9c-monitor-admin.php:487
+msgid "Create a free account in the N9C dashboard"
+msgstr "Kostenloses Konto im N9C-Dashboard erstellen"
+
+#: includes/class-n9c-monitor-admin.php:487
+msgid "full scope for 14 days, then free forever for one installation."
+msgstr "14 Tage voller Umfang, danach dauerhaft gratis für eine Installation."
+
+#: includes/class-n9c-monitor-admin.php:488
+msgid "In the dashboard, create a connection code for this installation."
+msgstr "Im Dashboard einen Verbindungscode für diese Installation erzeugen."
+
+#: includes/class-n9c-monitor-admin.php:489
+msgid ""
+"Enter the code below and click \"Connect\" – the first evaluation appears "
+"right away."
+msgstr ""
+"Den Code unten eingeben und „Verbinden“ klicken – die erste Auswertung "
+"erscheint sofort."
+
+#: includes/class-n9c-monitor-admin.php:491
+msgid "Create account"
+msgstr "Konto erstellen"
+
+#: includes/class-n9c-monitor-admin.php:492
+msgid "I have an account – create a code"
+msgstr "Ich habe ein Konto – Code erzeugen"
+
+#: includes/class-n9c-monitor-admin.php:497
+msgid "Connection code (single use, valid for 72 hours):"
+msgstr "Verbindungscode (einmalig, 72 Stunden gültig):"
+
+#: includes/class-n9c-monitor-admin.php:499
+msgid "Connect"
+msgstr "Verbinden"
+
+#: includes/class-n9c-monitor-admin.php:501
+msgid "Nothing is sent to N9C before you connect."
+msgstr "Vor dem Verbinden wird nichts an N9C gesendet."
+
+#. translators: %d: number of hours
+#: includes/class-n9c-monitor-reporter.php:70
+#, php-format
+msgid "N9C Inside Monitor (every %d hours)"
+msgstr "N9C Inside Monitor (alle %d Stunden)"
+
+#: includes/class-n9c-monitor-reporter.php:131
+msgid ""
+"The connection code does not have the expected format (n9c-enroll- followed "
+"by 32 characters)."
+msgstr ""
+"Der Verbindungscode hat nicht das erwartete Format (n9c-enroll- gefolgt von "
+"32 Zeichen)."
+
+#: includes/class-n9c-monitor-reporter.php:138
+msgid ""
+"The connection is defined by N9C_MONITOR_* constants or environment "
+"variables. Please change it there."
+msgstr ""
+"Die Verbindung ist über N9C_MONITOR_*-Konstanten oder Umgebungsvariablen "
+"festgelegt. Bitte dort ändern."
+
+#: includes/class-n9c-monitor-reporter.php:145
+msgid ""
+"This installation is already connected. Use \"Reconnect\" (or --force) to "
+"connect it again."
+msgstr ""
+"Diese Installation ist bereits verbunden. Zum erneuten Verbinden „Neu "
+"verbinden“ (bzw. --force) verwenden."
+
+#. translators: 1: API URL, 2: error message
+#: includes/class-n9c-monitor-reporter.php:172
+#, php-format
+msgid "Could not reach %1$s: %2$s"
+msgstr "%1$s nicht erreichbar: %2$s"
+
+#. translators: 1: HTTP status code, 2: error details
+#: includes/class-n9c-monitor-reporter.php:180
+#, php-format
+msgid "Connection refused (HTTP %1$d): %2$s"
+msgstr "Verbinden abgelehnt (HTTP %1$d): %2$s"
+
+#: includes/class-n9c-monitor-reporter.php:190
+msgid "Reconnected (existing instance, history is kept)."
+msgstr "Neu verbunden (bestehende Instanz, Verlauf bleibt erhalten)."
+
+#: includes/class-n9c-monitor-reporter.php:191
+msgid "Connected."
+msgstr "Verbunden."
+
+#: includes/class-n9c-monitor-reporter.php:195
+msgid ""
+"The first report could not be delivered yet; it will be retried "
+"automatically."
+msgstr ""
+"Der erste Report konnte noch nicht zugestellt werden; er wird automatisch "
+"erneut versucht."
+
+#: includes/class-n9c-monitor-reporter.php:197
+msgid "First report delivered."
+msgstr "Erster Report zugestellt."
+
+#: includes/class-n9c-monitor-reporter.php:240
+msgid "Not connected yet. Enter a connection code first."
+msgstr "Noch nicht verbunden. Bitte zuerst einen Verbindungscode eingeben."

@@ -1,0 +1,11 @@
+# Nicht in der Plugin-ZIP und nicht im SVN von wordpress.org
+/.git
+/.github
+/.wordpress-org
+/Build
+/.distignore
+/.gitignore
+/.gitattributes
+/README.md
+/CHANGELOG.md
+.DS_Store

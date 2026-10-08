@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       N9C Inside Monitor
+ * Plugin Name:       N9C Monitor
  * Plugin URI:        https://n9c.io/monitoring
  * Description:       Security monitoring from the inside: reports versions, plugins, configuration and admin accounts without two-factor login to the N9C Inside Monitor. Numbers and flags only – no user names, e-mail addresses or content.
  * Version:           0.1.0

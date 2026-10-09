@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       N9C Monitor
+ * Plugin Name:       N9C Inside Monitor
  * Plugin URI:        https://n9c.io/monitoring
  * Description:       Security monitoring from the inside: reports versions, plugins, configuration and admin accounts without two-factor login to the N9C Inside Monitor. Numbers and flags only – no user names, e-mail addresses or content.
  * Version:           0.1.0
@@ -11,7 +11,6 @@
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       n9c-monitor
- * Domain Path:       /languages
  * Network:           true
  *
  * @package N9C_Monitor
@@ -50,17 +49,6 @@ function n9c_monitor_deactivate() {
 
 register_activation_hook( __FILE__, 'n9c_monitor_activate' );
 register_deactivation_hook( __FILE__, 'n9c_monitor_deactivate' );
-
-/**
- * Bundled translations (German) until language packs from
- * translate.wordpress.org are available; those take precedence.
- *
- * @return void
- */
-function n9c_monitor_load_textdomain() {
-	load_plugin_textdomain( 'n9c-monitor', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); // phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- bundled German translation.
-}
-add_action( 'init', 'n9c_monitor_load_textdomain' );
 
 N9C_Monitor_Activity::init();
 N9C_Monitor_Reporter::init();

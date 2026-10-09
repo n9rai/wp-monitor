@@ -20,4 +20,5 @@
 - Erkennung umgezogener oder kopierter Sites (Staging): automatische Reports
   pausieren, bis „umgezogen“ oder „Kopie – trennen“ gewählt ist.
 - WP-CLI: `wp n9c-monitor connect|report [--dry-run]|status|disconnect`.
-- Deutsche Übersetzung mitgeliefert.
+- Übersetzbar (Text-Domain `n9c-monitor`); Sprachdateien kommen über
+  translate.wordpress.org.

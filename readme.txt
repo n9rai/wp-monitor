@@ -1,5 +1,5 @@
-=== N9C Monitor ===
-Contributors: n9c
+=== N9C Inside Monitor ===
+Contributors: n9rai
 Tags: security, monitoring, vulnerability, two-factor, hardening
 Requires at least: 5.9
 Tested up to: 7.1

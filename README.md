@@ -99,10 +99,11 @@ dort gelöscht werden.
   `SVN_USERNAME`/`SVN_PASSWORD` gesetzt sind – Veröffentlichung im SVN von
   wordpress.org (10up/action-wordpress-plugin-deploy). Bilder für die
   Plugin-Seite liegen in `.wordpress-org/`.
-- Übersetzungen: Quelltexte englisch (Vorgabe wordpress.org), Deutsch liegt in
-  `languages/` bei (`.po`, `.mo`, `.l10n.php`). Neu erzeugen:
-  `wp i18n make-pot . languages/n9c-monitor.pot`, `.po` pflegen, dann
-  `wp i18n make-mo languages && wp i18n make-php languages`.
+- Übersetzungen: Quelltexte englisch, Text-Domain `n9c-monitor`. Sprachdateien
+  liefert wordpress.org über translate.wordpress.org aus (Vorgabe des Reviews:
+  keine Übersetzungsdateien im Plugin). Die deutsche Übersetzung liegt unter
+  `Build/translations/` bereit und wird nach der Freigabe dort importiert.
+  POT neu erzeugen: `wp i18n make-pot . Build/translations/n9c-monitor.pot --exclude=Build`.
 
 ## Lizenz
 
